@@ -45,7 +45,23 @@
     {id:"p3", type:"photo", category:"colour-grading", title:"Teal & Orange Grade", client:"", desc:"", poster:"https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=900&auto=format&fit=crop", src:""},
     {id:"p4", type:"photo", category:"travel", title:"Hillside Fog", client:"", desc:"", poster:"https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=900&auto=format&fit=crop", src:""},
     {id:"p5", type:"photo", category:"photography", title:"Studio Light Study", client:"", desc:"", poster:"https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=900&auto=format&fit=crop", src:""},
-    {id:"w4", type:"video", category:"reels", title:"Studio BTS — Short", client:"Personal Project", desc:"Behind-the-scenes edit from a commercial shoot day.", poster:"https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1000&auto=format&fit=crop", src:""}
+    {id:"w4", type:"video", category:"reels", title:"Studio BTS — Short", client:"Personal Project", desc:"Behind-the-scenes edit from a commercial shoot day.", poster:"https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1000&auto=format&fit=crop", src:""},
+    {id:"vg1", type:"video", category:"videography", title:"Videography Cut 01", client:"Personal Project", desc:"", poster:"", src:"https://youtu.be/-nUYUweWZ70?si=JvjUZ90Fz1iOZEuO"},
+    {id:"vg2", type:"video", category:"videography", title:"Videography Cut 02", client:"Personal Project", desc:"", poster:"", src:"https://youtu.be/1mO8UPYIye8?si=Ofl16X_ouXHg7VCV"},
+    {id:"vg3", type:"video", category:"videography", title:"Videography Cut 03", client:"Personal Project", desc:"", poster:"", src:"https://youtu.be/svHNDE96wnc?si=W0o9i-QzP_kT9_pO"},
+    {id:"vg4", type:"video", category:"videography", title:"Videography Cut 04", client:"Personal Project", desc:"", poster:"", src:"https://youtu.be/ULGVcdmqcXw?si=-jyIWjfVPctK3pf0"},
+    {id:"vg5", type:"video", category:"videography", title:"Videography Cut 05", client:"Personal Project", desc:"", poster:"", src:"https://youtu.be/fOTZyn5XyYM?si=ci74S0Qsd0JcgInK"},
+    {id:"vg6", type:"video", category:"videography", title:"Videography Short 01", client:"Personal Project", desc:"", poster:"", src:"https://youtube.com/shorts/3sMw3a_fx-Q?si=O_3OiXS_dxt8OfFd"},
+    {id:"vg7", type:"video", category:"videography", title:"Videography Short 02", client:"Personal Project", desc:"", poster:"", src:"https://youtube.com/shorts/pgEnvGM4OGg?si=4RFxCqVRfXGcRAkV"},
+    {id:"vg8", type:"video", category:"videography", title:"Videography Short 03", client:"Personal Project", desc:"", poster:"", src:"https://youtube.com/shorts/iqc1eCNykHQ?si=uqheJ7atBAxLHsJa"},
+    {id:"vg9", type:"video", category:"videography", title:"Videography Short 04", client:"Personal Project", desc:"", poster:"", src:"https://youtube.com/shorts/UkGb-_jxOOA?si=3OBZnyoNMSbuU6-z"},
+    {id:"vg10", type:"video", category:"videography", title:"Videography Short 05", client:"Personal Project", desc:"", poster:"", src:"https://youtube.com/shorts/542kNUgGnJ4?si=KIKnWN_BV0BC1nBE"},
+    {id:"vg11", type:"video", category:"videography", title:"Videography Short 06", client:"Personal Project", desc:"", poster:"", src:"https://youtube.com/shorts/caD9qp5IhlM?si=KKQMEp34fSQJHFhm"},
+    {id:"vg12", type:"video", category:"videography", title:"Videography Short 07", client:"Personal Project", desc:"", poster:"", src:"https://youtube.com/shorts/SMIUK_0x0kY?si=1CzU3geV51GZDN8G"},
+    {id:"vg13", type:"video", category:"videography", title:"Videography Short 08", client:"Personal Project", desc:"", poster:"", src:"https://youtube.com/shorts/vwQlqZcjvyo?si=kPoOf1IJS6tvAa52"},
+    {id:"vg14", type:"video", category:"videography", title:"Videography Short 09", client:"Personal Project", desc:"", poster:"", src:"https://youtube.com/shorts/kQWWmgfF17Q?si=7xfjBrBZeK1HvEEz"},
+    {id:"vg15", type:"video", category:"videography", title:"Videography Short 10", client:"Personal Project", desc:"", poster:"", src:"https://youtube.com/shorts/04x50GWp6pg?si=5Vl04tXskNeUJDsx"},
+    {id:"vg16", type:"video", category:"videography", title:"Videography Short 11", client:"Personal Project", desc:"", poster:"", src:"https://youtube.com/shorts/NublDkzty_E?si=6p18FnZvzc2eBZy1"}
   ];
 
   const DEFAULT_OFFERS = {
@@ -101,6 +117,7 @@
       return null;
     },
     isYouTube(url){ return !!SDK.youTubeId(url); },
+    isYouTubeShort(url){ return !!(url && /youtube\.com\/shorts\//.test(url)); },
     youTubeThumb(url){
       const id = SDK.youTubeId(url);
       return id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : "";

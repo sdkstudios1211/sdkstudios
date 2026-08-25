@@ -60,6 +60,7 @@
       <div class="filter-row" id="filterRow">
         <button class="filter-pill active" data-filter="all">All</button>
         <button class="filter-pill" data-filter="video-editing">Video Editing</button>
+        <button class="filter-pill" data-filter="videography">Videography</button>
         <button class="filter-pill" data-filter="reels">Reels &amp; Shorts</button>
         <button class="filter-pill" data-filter="commercial">Commercial Ads</button>
         <button class="filter-pill" data-filter="travel">Travel Videos</button>
@@ -73,13 +74,13 @@
   </div>
 </section>
 
-<!-- ============ VIDEOGRAPHY SHOWCASE ============ -->
+<!-- ============ FEATURED VIDEO SHOWCASE ============ -->
 <section id="featured">
   <div class="container">
-    <div class="scrubber-divider reveal" style="--fill:45%"><span class="tc">00:03</span><span class="track"></span><span class="tc">VIDEOGRAPHY</span></div>
-    <span class="eyebrow reveal">Watch the work</span>
-    <h2 class="section-title reveal">Videography</h2>
-    <p class="section-sub reveal">Long-form edits, brand films and vertical reels. Select any project to play it directly in the website viewer.</p>
+    <div class="scrubber-divider reveal" style="--fill:45%"><span class="tc">00:03</span><span class="track"></span><span class="tc">FEATURED VIDEOS</span></div>
+    <span class="eyebrow reveal">Showcase</span>
+    <h2 class="section-title reveal">Featured video projects</h2>
+    <p class="section-sub reveal">Client name, brief and thumbnail for each delivered project. Click any card to open it in the viewer.</p>
     <div class="video-grid" id="videoGrid"></div>
   </div>
 </section>
@@ -131,6 +132,7 @@
         <label>Category</label>
         <select id="aw-category">
           <option value="video-editing">Video Editing</option>
+          <option value="videography">Videography</option>
           <option value="reels">Reels &amp; Shorts</option>
           <option value="commercial">Commercial Ads</option>
           <option value="travel">Travel Videos</option>
@@ -195,7 +197,7 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
 const CAT_LABEL = {
-  "video-editing":"Video Editing", "reels":"Reels & Shorts", "commercial":"Commercial Ads",
+  "video-editing":"Video Editing", "videography":"Videography", "reels":"Reels & Shorts", "commercial":"Commercial Ads",
   "travel":"Travel Videos", "photography":"Photography", "colour-grading":"Colour Grading",
   "wedding":"Video Editing"
 };
@@ -232,9 +234,9 @@ function renderGrids(){
     ? filtered.map(itemMarkup).join("")
     : `<div class="masonry-empty">No items in this category yet${SDK.isOwner() ? ' — use "Add Photo / Video" to add one.' : '.'}</div>`;
 
-  // Videography showcase = playable video projects
+  // Featured video showcase = all videos with a client name
   const videoGrid = document.getElementById("videoGrid");
-  const videos = works.filter(w => w.type === "video" && w.src);
+  const videos = works.filter(w => w.type === "video");
   videoGrid.innerHTML = videos.map(v => `
     <div class="video-card glass reveal in" data-id="${v.id}">
       <div class="video-thumb"><img src="${posterFor(v)}" alt="${v.title}" onerror="this.onerror=null;this.src='assets/logo.jpg';"><span class="play-badge" style="opacity:1;"><i class="fa-solid fa-play"></i></span></div>
@@ -275,7 +277,8 @@ function openLightbox(id){
   const lb = document.getElementById("lightbox");
   const media = document.getElementById("lightboxMedia");
   if(item.type === "video" && SDK.isYouTube(item.src)){
-    media.innerHTML = `<div class="yt-frame"><iframe src="${SDK.youTubeEmbed(item.src, true)}" title="${item.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+    const vertical = SDK.isYouTubeShort(item.src) ? " yt-frame-vertical" : "";
+    media.innerHTML = `<div class="yt-frame${vertical}"><iframe src="${SDK.youTubeEmbed(item.src, true)}" title="${item.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
   }else if(item.type === "video" && item.src){
     media.innerHTML = `<video src="${item.src}" controls autoplay playsinline></video>`;
   }else if(item.type === "video"){
