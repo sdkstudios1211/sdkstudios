@@ -17,8 +17,7 @@
     works:   "sdk_works_v1",
     offers:  "sdk_offers_v1",
     theme:   "sdk_theme_v1",
-    owner:   "sdk_owner_v1",
-    videographyCollection: "sdk_videography_aug_2026_v1"
+    owner:   "sdk_owner_v1"
   };
 
   const OWNER_PASSCODE = "SDK-EDITS-1211"; // change this, then tell only yourself
@@ -28,36 +27,16 @@
     handle: "SDK Edits",
     tagline: "Professional Video Editor & Photographer",
     bio: "I'm Dinesh Kumar — a video editor and photographer who turns raw, unpolished footage into cinematic stories. Over the years I've cut reels, commercials, wedding films and travel documentaries, chasing one goal every time: make the viewer feel something in the first three seconds.",
-    years: "3+",
-    photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop",
-    heroImage: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?q=85&w=2200&auto=format&fit=crop",
+    years: "5+",
+    photo: "https://i.postimg.cc/1Xs1HB0B/SDK-EDITS-LOGO.png",
+    heroImage: "https://i.postimg.cc/1RYXQ9Nw/logo.jpg",
     email: "sdkstudios1211@gmail.com",
     whatsapp: "7708509295",
     instagram: "https://www.instagram.com/sdk_edits_official/?__pwa=1",
     youtube: ""
   };
 
-  const VIDEOGRAPHY_WORKS = [
-    {id:"youtube--nUYUweWZ70", type:"video", category:"video-editing", title:"Logo Intro Animation", client:"SDK Edits", desc:"A compact animated logo reveal built with energetic motion, sharp timing and a cinematic finish.", poster:"", src:"https://youtu.be/-nUYUweWZ70"},
-    {id:"youtube-1mO8UPYIye8", type:"video", category:"video-editing", title:"Editing Showcase 03", client:"SDK Edits", desc:"A polished editing showcase focused on pacing, transitions and music-led visual rhythm.", poster:"", src:"https://youtu.be/1mO8UPYIye8"},
-    {id:"youtube-svHNDE96wnc", type:"video", category:"travel", title:"Trip Video", client:"SDK Edits", desc:"A travel montage shaped around movement, atmosphere and memorable moments from the journey.", poster:"", src:"https://youtu.be/svHNDE96wnc"},
-    {id:"youtube-ULGVcdmqcXw", type:"video", category:"video-editing", title:"Editing Showcase — Video 03", client:"SDK Edits", desc:"A visual edit combining clean cuts, dynamic sequencing and a cinematic presentation.", poster:"", src:"https://youtu.be/ULGVcdmqcXw"},
-    {id:"youtube-fOTZyn5XyYM", type:"video", category:"video-editing", title:"Karuppu Recreation", client:"SDK Edits", desc:"A dramatic recreation edit shaped with cinematic pacing, music-led cuts and a polished visual treatment.", poster:"", src:"https://youtu.be/fOTZyn5XyYM"},
-    {id:"youtube-3sMw3a_fx-Q", type:"video", category:"commercial", title:"Children's Eye Care Awareness", client:"Abbas Opticals", desc:"A concise awareness reel encouraging parents to take children's vision changes seriously.", poster:"", src:"https://youtube.com/shorts/3sMw3a_fx-Q"},
-    {id:"youtube-pgEnvGM4OGg", type:"video", category:"commercial", title:"Gravity Meets Clear Vision", client:"Abbas Opticals", desc:"A playful optical brand reel connecting visual clarity with a strong, memorable concept.", poster:"", src:"https://youtube.com/shorts/pgEnvGM4OGg"},
-    {id:"youtube-iqc1eCNykHQ", type:"video", category:"commercial", title:"The Right Lens", client:"Abbas Opticals", desc:"A product-focused short highlighting the difference the right lens makes to everyday vision.", poster:"", src:"https://youtube.com/shorts/iqc1eCNykHQ"},
-    {id:"youtube-UkGb-_jxOOA", type:"video", category:"commercial", title:"ZEISS Clarity", client:"Abbas Opticals", desc:"A crisp promotional reel introducing next-level clarity through ZEISS lenses.", poster:"", src:"https://youtube.com/shorts/UkGb-_jxOOA"},
-    {id:"youtube-542kNUgGnJ4", type:"video", category:"reels", title:"College Reel 01", client:"SDK Edits", desc:"A fast-paced college reel edited for social viewing with energetic cuts and event highlights.", poster:"", src:"https://youtube.com/shorts/542kNUgGnJ4"},
-    {id:"youtube-caD9qp5IhlM", type:"video", category:"video-editing", title:"Logo Motion Reel", client:"SDK Edits", desc:"A short-form logo animation with a clean reveal and focused motion design.", poster:"", src:"https://youtube.com/shorts/caD9qp5IhlM"},
-    {id:"youtube-SMIUK_0x0kY", type:"video", category:"reels", title:"College Reel 02", client:"SDK Edits", desc:"A social-first college edit capturing campus energy through rhythmic cuts and compact storytelling.", poster:"", src:"https://youtube.com/shorts/SMIUK_0x0kY"},
-    {id:"youtube-vwQlqZcjvyo", type:"video", category:"reels", title:"Event Highlight Reel", client:"SDK Edits", desc:"A vertical highlight edit bringing key event moments together in a quick, engaging sequence.", poster:"", src:"https://youtube.com/shorts/vwQlqZcjvyo"},
-    {id:"youtube-kQWWmgfF17Q", type:"video", category:"reels", title:"College Reel 03", client:"SDK Edits", desc:"A punchy college montage created for short-form platforms and mobile-first viewing.", poster:"", src:"https://youtube.com/shorts/kQWWmgfF17Q"},
-    {id:"youtube-04x50GWp6pg", type:"video", category:"reels", title:"College Edits", client:"SDK Edits", desc:"A compact showcase of college moments, transitions and music-synced editing.", poster:"", src:"https://youtube.com/shorts/04x50GWp6pg"},
-    {id:"youtube-NublDkzty_E", type:"video", category:"reels", title:"Mehanthi Reel", client:"SDK Edits", desc:"A celebratory vertical reel edited with warm moments, lively pacing and social-ready framing.", poster:"", src:"https://youtube.com/shorts/NublDkzty_E"}
-  ];
-
   const DEFAULT_WORKS = [
-    ...VIDEOGRAPHY_WORKS,
     {id:"w1", type:"video", category:"reels", title:"Coastal Drift — Travel Reel", client:"Personal Project", desc:"A 45-second colour-graded travel reel shot along the Tamil Nadu coastline, cut to a rising cinematic score.", poster:"https://images.unsplash.com/photo-1500534623283-312aade485b7?q=80&w=1000&auto=format&fit=crop", src:""},
     {id:"w2", type:"video", category:"commercial", title:"Sunrise Roasters — Brand Ad", client:"Sunrise Roasters Co.", desc:"30-second product commercial with motion graphics overlays and warm colour grading.", poster:"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1000&auto=format&fit=crop", src:""},
     {id:"w3", type:"video", category:"wedding", title:"Aarav & Meera — Wedding Film", client:"Private Client", desc:"Cinematic same-day edit highlighting candid emotion over a classical score.", poster:"https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop", src:""},
@@ -98,17 +77,7 @@
     keys: STORE_KEYS,
     getProfile(){ return readStore(STORE_KEYS.profile, DEFAULT_PROFILE); },
     setProfile(p){ return writeStore(STORE_KEYS.profile, p); },
-    getWorks(){
-      const works = readStore(STORE_KEYS.works, DEFAULT_WORKS);
-      if(!localStorage.getItem(STORE_KEYS.videographyCollection)){
-        const existingIds = new Set(works.map(work => work.id));
-        const newVideos = VIDEOGRAPHY_WORKS.filter(work => !existingIds.has(work.id));
-        works.unshift(...structuredCloneSafe(newVideos));
-        writeStore(STORE_KEYS.works, works);
-        try{ localStorage.setItem(STORE_KEYS.videographyCollection, "1"); }catch(e){}
-      }
-      return works;
-    },
+    getWorks(){ return readStore(STORE_KEYS.works, DEFAULT_WORKS); },
     setWorks(w){ return writeStore(STORE_KEYS.works, w); },
     getOffers(){ return readStore(STORE_KEYS.offers, DEFAULT_OFFERS); },
     setOffers(o){ return writeStore(STORE_KEYS.offers, o); },
