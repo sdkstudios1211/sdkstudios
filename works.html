@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Works — SDK Edits | Dinesh Kumar</title>
+<meta name="description" content="Portfolio of Dinesh Kumar (SDK Edits): video editing, reels, commercial ads, travel videos, photography and colour grading.">
+<meta name="theme-color" content="#0a0b0d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-mark">SDK<span style="color:var(--gold)">.</span>EDITS</div>
+  <div class="loader-track"></div>
+  <div class="loader-tc">LOADING TIMELINE — 00:00:03:12</div>
+</div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><img data-bind="brandMark" src="" alt="SDK Edits logo"></span>
+      <span class="brand-text">SDK<span>.</span>EDITS</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" data-nav="index.html">Home</a>
+      <a href="works.html" data-nav="works.html" class="active">My Works</a>
+      <a href="services.html" data-nav="services.html">Services</a>
+      <a href="offers.html" data-nav="offers.html">Offers</a>
+      <a href="contact.html" data-nav="contact.html">Contact Us</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle theme"><i class="theme-icon fa-solid fa-sun"></i></button>
+      <a class="icon-btn" data-bind="whatsappHref" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      <button class="nav-burger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow reveal">Portfolio</span>
+    <h1 class="section-title reveal">My Works</h1>
+    <p class="section-sub reveal">A running reel of edits, grades and frames — photos and videos I've shot, cut and delivered. Filter by category or open any project for the full story.</p>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" style="padding-top:0;">
+  <div class="container">
+    <div class="scrubber-divider reveal" style="--fill:20%"><span class="tc">00:01</span><span class="track"></span><span class="tc">GALLERY</span></div>
+
+    <div class="owner-toolbar">
+      <div class="filter-row" id="filterRow">
+        <button class="filter-pill active" data-filter="all">All</button>
+        <button class="filter-pill" data-filter="video-editing">Video Editing</button>
+        <button class="filter-pill" data-filter="reels">Reels &amp; Shorts</button>
+        <button class="filter-pill" data-filter="commercial">Commercial Ads</button>
+        <button class="filter-pill" data-filter="travel">Travel Videos</button>
+        <button class="filter-pill" data-filter="photography">Photography</button>
+        <button class="filter-pill" data-filter="colour-grading">Colour Grading</button>
+      </div>
+      <button class="btn btn-primary owner-only inline" data-open-modal="addWorkModal"><i class="fa-solid fa-plus"></i> Add Photo / Video</button>
+    </div>
+
+    <div class="masonry" id="masonryGrid"></div>
+  </div>
+</section>
+
+<!-- ============ VIDEOGRAPHY SHOWCASE ============ -->
+<section id="featured">
+  <div class="container">
+    <div class="scrubber-divider reveal" style="--fill:45%"><span class="tc">00:03</span><span class="track"></span><span class="tc">VIDEOGRAPHY</span></div>
+    <span class="eyebrow reveal">Watch the work</span>
+    <h2 class="section-title reveal">Videography</h2>
+    <p class="section-sub reveal">Long-form edits, brand films and vertical reels. Select any project to play it directly in the website viewer.</p>
+    <div class="video-grid" id="videoGrid"></div>
+  </div>
+</section>
+
+<!-- ============ PHOTOGRAPHY SHOWCASE ============ -->
+<section id="photography">
+  <div class="container">
+    <div class="scrubber-divider reveal" style="--fill:68%"><span class="tc">00:04</span><span class="track"></span><span class="tc">PHOTOGRAPHY</span></div>
+    <span class="eyebrow reveal">Stills</span>
+    <h2 class="section-title reveal">Photography showcase</h2>
+    <p class="section-sub reveal">A hover-and-look masonry of frames — portraits, travel and colour studies.</p>
+    <div class="masonry" id="photoGrid" style="margin-top:2.6rem;"></div>
+  </div>
+</section>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" data-lightbox-close><i class="fa-solid fa-xmark"></i></button>
+  <div class="lightbox-inner">
+    <div id="lightboxMedia"></div>
+    <div class="lightbox-meta">
+      <div>
+        <div class="video-client" id="lbClient"></div>
+        <div class="video-title" id="lbTitle"></div>
+        <p class="video-desc" id="lbDesc"></p>
+        <a href="#" target="_blank" rel="noopener" id="lbYouTubeLink" class="btn btn-small btn-ghost" style="display:none; margin-top:.9rem;"><i class="fa-brands fa-youtube"></i> Watch on YouTube</a>
+      </div>
+      <button class="btn btn-danger owner-only inline" id="lbDelete"><i class="fa-solid fa-trash"></i> Delete</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ADD WORK MODAL (owner only) ============ -->
+<div class="modal-backdrop owner-only" id="addWorkModal">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 style="font-family:var(--font-body); font-size:1.15rem;">Add Photo / Video</h3>
+      <button class="modal-close" data-close-modal><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <form id="addWorkForm">
+      <div class="field">
+        <label>Type</label>
+        <select id="aw-type">
+          <option value="photo">Photo</option>
+          <option value="video">Video</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Category</label>
+        <select id="aw-category">
+          <option value="video-editing">Video Editing</option>
+          <option value="reels">Reels &amp; Shorts</option>
+          <option value="commercial">Commercial Ads</option>
+          <option value="travel">Travel Videos</option>
+          <option value="photography">Photography</option>
+          <option value="colour-grading">Colour Grading</option>
+        </select>
+      </div>
+      <div class="field"><label>Title</label><input type="text" id="aw-title" required></div>
+      <div class="field"><label>YouTube link (for videos — paste the normal youtube.com/watch or youtu.be link)</label><input type="url" id="aw-src" placeholder="https://youtu.be/..."></div>
+      <div class="field"><label>Thumbnail / Photo image URL <span style="color:var(--fog-dim); text-transform:none; letter-spacing:0;">— optional for YouTube, it's pulled automatically</span></label><input type="url" id="aw-poster" placeholder="https://..."></div>
+      <div class="field-row">
+        <div class="field"><label>Client name (videos)</label><input type="text" id="aw-client"></div>
+        <div class="field"><label>&nbsp;</label></div>
+      </div>
+      <div class="field"><label>Description</label><textarea id="aw-desc"></textarea></div>
+      <p class="hint-text">For videos: paste a YouTube link and it plays right here on the site in a popup player — nothing opens on YouTube itself. For photos: paste any hosted image link as the thumbnail.</p>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" data-close-modal>Cancel</button>
+        <button type="submit" class="btn btn-primary">Add to Portfolio</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand"><span class="brand-mark"><img data-bind="brandMark" src="" alt=""></span><span class="brand-text">SDK<span>.</span>EDITS</span></div>
+        <p>Cinematic video editing and photography by Dinesh Kumar. Reels, commercials, weddings and colour grading.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="works.html">My Works</a>
+          <a href="services.html">Services</a>
+          <a href="offers.html">Offers</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a data-bind="instagramHref" href="#" target="_blank" rel="noopener">Instagram</a>
+          <a data-bind="whatsappHref" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a data-bind="email" href="#">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> SDK Edits — Dinesh Kumar. All rights reserved.</p>
+      <div class="footer-social">
+        <a class="icon-btn" data-bind="instagramHref" href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a class="icon-btn" data-bind="whatsappHref" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <button class="icon-btn" data-owner-trigger aria-label="Owner login"><i class="fa-solid fa-lock"></i></button>
+      </div>
+    </div>
+  </div>
+</footer>
+<button class="to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="common.js"></script>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const CAT_LABEL = {
+  "video-editing":"Video Editing", "reels":"Reels & Shorts", "commercial":"Commercial Ads",
+  "travel":"Travel Videos", "photography":"Photography", "colour-grading":"Colour Grading",
+  "wedding":"Video Editing"
+};
+
+let activeFilter = "all";
+
+function posterFor(item){
+  if(item.poster) return item.poster;
+  if(item.type === "video" && SDK.isYouTube(item.src)) return SDK.youTubeThumb(item.src);
+  return "assets/logo.jpg";
+}
+
+function itemMarkup(item){
+  const isVideo = item.type === "video";
+  return `
+  <div class="masonry-item reveal in" data-cat="${item.category}" data-id="${item.id}">
+    <div class="card-media">
+      <img src="${posterFor(item)}" alt="${item.title}" loading="lazy" onerror="this.onerror=null;this.src='assets/logo.jpg';">
+      ${isVideo ? '<span class="play-badge"><i class="fa-solid fa-play"></i></span>' : ''}
+      <div class="card-overlay">
+        <span class="card-cat">${CAT_LABEL[item.category] || item.category}</span>
+        <span class="card-title">${item.title}</span>
+      </div>
+      <button class="edit-pencil owner-only" data-del="${item.id}" title="Delete"><i class="fa-solid fa-trash"></i></button>
+    </div>
+  </div>`;
+}
+
+function renderGrids(){
+  const works = SDK.getWorks();
+  const grid = document.getElementById("masonryGrid");
+  const filtered = activeFilter === "all" ? works : works.filter(w => w.category === activeFilter);
+  grid.innerHTML = filtered.length
+    ? filtered.map(itemMarkup).join("")
+    : `<div class="masonry-empty">No items in this category yet${SDK.isOwner() ? ' — use "Add Photo / Video" to add one.' : '.'}</div>`;
+
+  // Videography showcase = playable video projects
+  const videoGrid = document.getElementById("videoGrid");
+  const videos = works.filter(w => w.type === "video" && w.src);
+  videoGrid.innerHTML = videos.map(v => `
+    <div class="video-card glass reveal in" data-id="${v.id}">
+      <div class="video-thumb"><img src="${posterFor(v)}" alt="${v.title}" onerror="this.onerror=null;this.src='assets/logo.jpg';"><span class="play-badge" style="opacity:1;"><i class="fa-solid fa-play"></i></span></div>
+      <div class="video-body">
+        <span class="video-client">${v.client || "Personal Project"}</span>
+        <h3 class="video-title">${v.title}</h3>
+        <p class="video-desc">${v.desc || ""}</p>
+      </div>
+    </div>`).join("") || `<div class="masonry-empty">No videos yet.</div>`;
+
+  // Photography showcase = all photos
+  const photoGrid = document.getElementById("photoGrid");
+  const photos = works.filter(w => w.type === "photo");
+  photoGrid.innerHTML = photos.map(itemMarkup).join("") || `<div class="masonry-empty">No photos yet.</div>`;
+
+  attachOpeners();
+}
+
+function attachOpeners(){
+  document.querySelectorAll(".masonry-item, .video-card").forEach(el=>{
+    el.addEventListener("click", (e)=>{
+      if(e.target.closest("[data-del]")) return;
+      openLightbox(el.getAttribute("data-id"));
+    });
+  });
+  document.querySelectorAll("[data-del]").forEach(btn=>{
+    btn.addEventListener("click", (e)=>{
+      e.stopPropagation();
+      deleteWork(btn.getAttribute("data-del"));
+    });
+  });
+}
+
+function openLightbox(id){
+  const works = SDK.getWorks();
+  const item = works.find(w => w.id === id);
+  if(!item) return;
+  const lb = document.getElementById("lightbox");
+  const media = document.getElementById("lightboxMedia");
+  if(item.type === "video" && SDK.isYouTube(item.src)){
+    media.innerHTML = `<div class="yt-frame"><iframe src="${SDK.youTubeEmbed(item.src, true)}" title="${item.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+  }else if(item.type === "video" && item.src){
+    media.innerHTML = `<video src="${item.src}" controls autoplay playsinline></video>`;
+  }else if(item.type === "video"){
+    media.innerHTML = `<img src="${posterFor(item)}" alt="${item.title}" onerror="this.onerror=null;this.src='assets/logo.jpg';"><p class="hint-text" style="text-align:center;margin-top:.8rem;">No video link added yet for this project — showing thumbnail.</p>`;
+  }else{
+    media.innerHTML = `<img src="${posterFor(item)}" alt="${item.title}" onerror="this.onerror=null;this.src='assets/logo.jpg';">`;
+  }
+  document.getElementById("lbClient").textContent = item.client || "";
+  document.getElementById("lbTitle").textContent = item.title;
+  document.getElementById("lbDesc").textContent = item.desc || "";
+  const ytLink = document.getElementById("lbYouTubeLink");
+  if(item.type === "video" && SDK.isYouTube(item.src)){
+    ytLink.href = item.src;
+    ytLink.style.display = "inline-flex";
+  }else{
+    ytLink.style.display = "none";
+  }
+  document.getElementById("lbDelete").onclick = () => { deleteWork(id); lb.classList.remove("open"); };
+  lb.classList.add("open");
+}
+document.querySelector("[data-lightbox-close]").addEventListener("click", ()=>{
+  const lb = document.getElementById("lightbox");
+  lb.classList.remove("open");
+  document.getElementById("lightboxMedia").innerHTML = "";
+});
+document.getElementById("lightbox").addEventListener("click", e=>{
+  if(e.target.id === "lightbox"){ e.currentTarget.classList.remove("open"); document.getElementById("lightboxMedia").innerHTML=""; }
+});
+
+function deleteWork(id){
+  if(!SDK.isOwner()) return;
+  if(!confirm("Delete this item from your portfolio?")) return;
+  const works = SDK.getWorks().filter(w => w.id !== id);
+  SDK.setWorks(works);
+  renderGrids();
+  sdkToast("Item deleted");
+}
+
+/* filters */
+document.getElementById("filterRow").addEventListener("click", e=>{
+  const pill = e.target.closest(".filter-pill");
+  if(!pill) return;
+  document.querySelectorAll(".filter-pill").forEach(p=>p.classList.remove("active"));
+  pill.classList.add("active");
+  activeFilter = pill.getAttribute("data-filter");
+  renderGrids();
+});
+
+/* add work form */
+document.getElementById("addWorkForm").addEventListener("submit", e=>{
+  e.preventDefault();
+  const type = document.getElementById("aw-type").value;
+  const src = document.getElementById("aw-src").value.trim();
+  const poster = document.getElementById("aw-poster").value.trim();
+  if(type === "photo" && !poster){
+    sdkToast("Add an image URL for a photo item");
+    return;
+  }
+  if(type === "video" && !src){
+    sdkToast("Add a YouTube link for a video item");
+    return;
+  }
+  if(type === "video" && src && !SDK.isYouTube(src) && !/\.(mp4|webm|mov)(\?|$)/i.test(src)){
+    sdkToast("That doesn't look like a YouTube link or a direct video file — add one of those");
+    return;
+  }
+  const works = SDK.getWorks();
+  works.unshift({
+    id: SDK.uid(),
+    type,
+    category: document.getElementById("aw-category").value,
+    title: document.getElementById("aw-title").value.trim(),
+    poster,
+    src,
+    client: document.getElementById("aw-client").value.trim(),
+    desc: document.getElementById("aw-desc").value.trim()
+  });
+  SDK.setWorks(works);
+  e.target.reset();
+  document.getElementById("addWorkModal").classList.remove("open");
+  renderGrids();
+  sdkToast("Added to portfolio");
+});
+
+renderGrids();
+</script>
+</body>
+</html>

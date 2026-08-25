@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SDK Edits — Dinesh Kumar | Video Editor &amp; Photographer</title>
+<meta name="description" content="Dinesh Kumar (SDK Edits) — professional video editor and photographer specialising in cinematic edits, reels, commercials, colour grading and wedding films.">
+<meta name="theme-color" content="#0a0b0d">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Site styles -->
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+<!-- ============ LOADER ============ -->
+<div id="loader">
+  <div class="loader-mark">SDK<span style="color:var(--gold)">.</span>EDITS</div>
+  <div class="loader-track"></div>
+  <div class="loader-tc">LOADING TIMELINE — 00:00:03:12</div>
+</div>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><img data-bind="brandMark" src="" alt="SDK Edits logo"></span>
+      <span class="brand-text">SDK<span>.</span>EDITS</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" data-nav="index.html" class="active">Home</a>
+      <a href="works.html" data-nav="works.html">My Works</a>
+      <a href="services.html" data-nav="services.html">Services</a>
+      <a href="offers.html" data-nav="offers.html">Offers</a>
+      <a href="contact.html" data-nav="contact.html">Contact Us</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle theme"><i class="theme-icon fa-solid fa-sun"></i></button>
+      <a class="icon-btn" data-bind="whatsappHref" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      <button class="nav-burger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grain"></div>
+  <div class="container hero-inner">
+    <h1 class="visually-hidden">SDK Edits — Cinematic Video Editor and Photographer</h1>
+    <div class="hero-visual">
+      <div class="hero-visual-frame">
+        <img data-bind="heroImage" src="" alt="SDK Edits portfolio showcase">
+        <div class="hero-visual-overlay"></div>
+        <div class="hero-actions">
+          <a href="works.html" class="btn btn-primary"><i class="fa-solid fa-play"></i> View Portfolio</a>
+          <a href="contact.html" class="btn btn-ghost"><i class="fa-regular fa-envelope"></i> Contact Me</a>
+        </div>
+        <button class="edit-pencil owner-only" data-open-modal="profileModal" aria-label="Edit hero image"><i class="fa-solid fa-pen"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="container">
+    <div class="scrubber-divider reveal" style="--fill:14%"><span class="tc">00:01</span><span class="track"></span><span class="tc">ABOUT</span></div>
+
+    <div class="about-grid">
+      <div class="about-frame reveal glass">
+        <img data-bind="photo" src="" alt="Portrait of Dinesh Kumar">
+        <span class="tc-badge">DINESH KUMAR · SDK EDITS</span>
+        <button class="edit-pencil owner-only" data-open-modal="profileModal" aria-label="Edit profile"><i class="fa-solid fa-pen"></i></button>
+      </div>
+      <div class="about-copy reveal">
+        <span class="eyebrow">Who's behind the timeline</span>
+        <h2 class="section-title">Hi, I'm <span class="text-grad" data-bind="fullName">Dinesh Kumar</span></h2>
+        <p data-bind="bio">I'm Dinesh Kumar — a video editor and photographer who turns raw, unpolished footage into cinematic stories.</p>
+        <ul class="about-points">
+          <li><i class="fa-solid fa-film"></i> Cinematic colour grading &amp; mood-driven cuts</li>
+          <li><i class="fa-solid fa-clapperboard"></i> Reels, commercials &amp; wedding films</li>
+          <li><i class="fa-solid fa-wand-magic-sparkles"></i> Motion graphics &amp; basic VFX</li>
+          <li><i class="fa-solid fa-camera"></i> Photography &amp; on-set direction</li>
+        </ul>
+        <div class="hero-actions" style="margin-top:2.2rem;">
+          <a href="works.html" class="btn btn-ghost">See My Work <i class="fa-solid fa-arrow-right"></i></a>
+          <button class="btn owner-only" data-open-modal="profileModal"><i class="fa-solid fa-pen"></i> Edit Profile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="container">
+    <div class="scrubber-divider reveal" style="--fill:28%"><span class="tc">00:02</span><span class="track"></span><span class="tc">SKILLS</span></div>
+    <span class="eyebrow reveal">Toolkit</span>
+    <h2 class="section-title reveal">Software I live in, daily.</h2>
+    <p class="section-sub reveal">Every cut, grade and graphic on this site was built with this stack.</p>
+
+    <div class="skills-grid reveal-stagger">
+      <div class="skill-card glass reveal" style="--i:0">
+        <div class="skill-top"><span class="skill-name"><i class="fa-solid fa-scissors"></i> Adobe Premiere Pro</span><span class="skill-pct">95%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-fill="95"></div></div>
+      </div>
+      <div class="skill-card glass reveal" style="--i:1">
+        <div class="skill-top"><span class="skill-name"><i class="fa-solid fa-layer-group"></i> Adobe After Effects</span><span class="skill-pct">90%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-fill="90"></div></div>
+      </div>
+      <div class="skill-card glass reveal" style="--i:2">
+        <div class="skill-top"><span class="skill-name"><i class="fa-solid fa-image"></i> Adobe Photoshop</span><span class="skill-pct">88%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-fill="88"></div></div>
+      </div>
+      <div class="skill-card glass reveal" style="--i:3">
+        <div class="skill-top"><span class="skill-name"><i class="fa-solid fa-sliders"></i> Adobe Lightroom</span><span class="skill-pct">92%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-fill="92"></div></div>
+      </div>
+      <div class="skill-card glass reveal" style="--i:4">
+        <div class="skill-top"><span class="skill-name"><i class="fa-solid fa-clapperboard"></i> DaVinci Resolve</span><span class="skill-pct">85%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-fill="85"></div></div>
+      </div>
+      <div class="skill-card glass reveal" style="--i:5">
+        <div class="skill-top"><span class="skill-name"><i class="fa-solid fa-droplet"></i> Colour Grading</span><span class="skill-pct">93%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-fill="93"></div></div>
+      </div>
+      <div class="skill-card glass reveal" style="--i:6">
+        <div class="skill-top"><span class="skill-name"><i class="fa-solid fa-shapes"></i> Motion Graphics</span><span class="skill-pct">80%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-fill="80"></div></div>
+      </div>
+      <div class="skill-card glass reveal" style="--i:7">
+        <div class="skill-top"><span class="skill-name"><i class="fa-solid fa-camera"></i> Photography</span><span class="skill-pct">89%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-fill="89"></div></div>
+      </div>
+      <div class="skill-card glass reveal" style="--i:8">
+        <div class="skill-top"><span class="skill-name"><i class="fa-solid fa-video"></i> Videography</span><span class="skill-pct">91%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-fill="91"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="reveal"><div class="stat-num" data-count="180" data-suffix="+">0</div><div class="stat-label">Projects Completed</div></div>
+      <div class="reveal"><div class="stat-num" data-count="120" data-suffix="+">0</div><div class="stat-label">Happy Clients</div></div>
+      <div class="reveal"><div class="stat-num" data-count="3" data-suffix="+">0</div><div class="stat-label">Years Experience</div></div>
+      <div class="reveal"><div class="stat-num" data-count="260" data-suffix="+">0</div><div class="stat-label">Videos Delivered</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="scrubber-divider reveal" style="--fill:70%"><span class="tc">00:05</span><span class="track"></span><span class="tc">TESTIMONIALS</span></div>
+    <span class="eyebrow reveal">Client feedback</span>
+    <h2 class="section-title reveal">What clients say <span class="text-grad">after delivery.</span></h2>
+
+    <div class="testi-track-wrap reveal">
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-card glass">
+          <p class="testi-quote">Dinesh understood the mood of our brand instantly. The final ad felt like a completely different, premium product.</p>
+          <div class="testi-person">
+            <div class="testi-avatar">R</div>
+            <div><div class="testi-name">Rahul Menon</div><div class="testi-role">Founder, Sunrise Roasters</div></div>
+          </div>
+        </div>
+        <div class="testi-card glass">
+          <p class="testi-quote">Our wedding film still gives us chills. Every cut, every colour choice — it felt like watching a movie of our own day.</p>
+          <div class="testi-person">
+            <div class="testi-avatar">P</div>
+            <div><div class="testi-name">Priya &amp; Aarav</div><div class="testi-role">Wedding Clients</div></div>
+          </div>
+        </div>
+        <div class="testi-card glass">
+          <p class="testi-quote">Fast turnaround, sharp colour grading, and reels that actually perform. Booking again for our next campaign.</p>
+          <div class="testi-person">
+            <div class="testi-avatar">S</div>
+            <div><div class="testi-name">Sana Iqbal</div><div class="testi-role">Social Media Manager</div></div>
+          </div>
+        </div>
+        <div class="testi-card glass">
+          <p class="testi-quote">Sent over a screenshot of our first cut and Dinesh nailed the note in one revision. Genuinely easy to work with.</p>
+          <div class="testi-person">
+            <div class="testi-avatar">K</div>
+            <div><div class="testi-name">Karthik R.</div><div class="testi-role">YouTube Creator</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-nav reveal">
+      <button class="icon-btn" id="testiPrev" aria-label="Previous"><i class="fa-solid fa-arrow-left"></i></button>
+      <button class="icon-btn" id="testiNext" aria-label="Next"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROFILE EDIT MODAL (owner only) ============ -->
+<div class="modal-backdrop owner-only" id="profileModal">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 style="font-family:var(--font-body); font-size:1.15rem;">Edit Profile</h3>
+      <button class="modal-close" data-close-modal><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <form id="profileForm">
+      <div class="field">
+        <label>Profile photo URL (About section)</label>
+        <input type="url" id="pf-photo" placeholder="https://...">
+      </div>
+      <div class="field">
+        <label>Hero portfolio image URL</label>
+        <input type="text" id="pf-heroImage" placeholder="Image path or https://...">
+      </div>
+      <p class="hint-text">Paste any hosted image link or project image path. Wide, high-resolution images work best for the full-view hero.</p>
+      <div class="field-row">
+        <div class="field"><label>Full name</label><input type="text" id="pf-name" required></div>
+        <div class="field"><label>Brand / logo text</label><input type="text" id="pf-handle" required></div>
+      </div>
+      <div class="field"><label>Tagline</label><input type="text" id="pf-tagline" required></div>
+      <div class="field"><label>About / bio</label><textarea id="pf-bio" required></textarea></div>
+      <div class="field"><label>Years of experience (e.g. 3+)</label><input type="text" id="pf-years"></div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" data-close-modal>Cancel</button>
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand"><span class="brand-mark"><img data-bind="brandMark" src="" alt=""></span><span class="brand-text">SDK<span>.</span>EDITS</span></div>
+        <p>Cinematic video editing and photography by Dinesh Kumar. Reels, commercials, weddings and colour grading.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="works.html">My Works</a>
+          <a href="services.html">Services</a>
+          <a href="offers.html">Offers</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a data-bind="instagramHref" href="#" target="_blank" rel="noopener">Instagram</a>
+          <a data-bind="whatsappHref" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a data-bind="email" href="#">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> SDK Edits — Dinesh Kumar. All rights reserved.</p>
+      <div class="footer-social">
+        <a class="icon-btn" data-bind="instagramHref" href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a class="icon-btn" data-bind="whatsappHref" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <button class="icon-btn" data-owner-trigger aria-label="Owner login"><i class="fa-solid fa-lock"></i></button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="common.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* ---- Profile edit form ---- */
+  (function(){
+    const form = document.getElementById("profileForm");
+    if(!form) return;
+    function fill(){
+      const p = SDK.getProfile();
+      document.getElementById("pf-photo").value = p.photo || "";
+      document.getElementById("pf-heroImage").value = p.heroImage || "";
+      document.getElementById("pf-name").value = p.name || "";
+      document.getElementById("pf-handle").value = p.handle || "";
+      document.getElementById("pf-tagline").value = p.tagline || "";
+      document.getElementById("pf-bio").value = p.bio || "";
+      document.getElementById("pf-years").value = p.years || "";
+    }
+    document.querySelectorAll("[data-open-modal='profileModal']").forEach(b=>b.addEventListener("click", fill));
+    form.addEventListener("submit", e=>{
+      e.preventDefault();
+      const p = SDK.getProfile();
+      p.photo = document.getElementById("pf-photo").value.trim() || p.photo;
+      p.heroImage = document.getElementById("pf-heroImage").value.trim() || p.heroImage;
+      p.name = document.getElementById("pf-name").value.trim();
+      p.handle = document.getElementById("pf-handle").value.trim();
+      p.tagline = document.getElementById("pf-tagline").value.trim();
+      p.bio = document.getElementById("pf-bio").value.trim();
+      p.years = document.getElementById("pf-years").value.trim();
+      SDK.setProfile(p);
+      sdkRenderProfileBits();
+      document.getElementById("profileModal").classList.remove("open");
+      sdkToast("Profile updated");
+    });
+  })();
+
+  /* ---- Testimonials slider ---- */
+  (function(){
+    const track = document.getElementById("testiTrack");
+    if(!track) return;
+    let idx = 0;
+    function cardWidth(){ return track.children[0].getBoundingClientRect().width + 26; }
+    function go(dir){
+      const max = track.children.length - 1;
+      idx = Math.max(0, Math.min(max, idx + dir));
+      track.style.transform = `translateX(-${idx * cardWidth()}px)`;
+    }
+    document.getElementById("testiPrev").addEventListener("click", ()=>go(-1));
+    document.getElementById("testiNext").addEventListener("click", ()=>go(1));
+  })();
+</script>
+</body>
+</html>

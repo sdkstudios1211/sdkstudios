@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — SDK Edits | Dinesh Kumar</title>
+<meta name="description" content="Get in touch with Dinesh Kumar (SDK Edits) via WhatsApp, Instagram or email to discuss your next video or photo project.">
+<meta name="theme-color" content="#0a0b0d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-mark">SDK<span style="color:var(--gold)">.</span>EDITS</div>
+  <div class="loader-track"></div>
+  <div class="loader-tc">LOADING TIMELINE — 00:00:03:12</div>
+</div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><img data-bind="brandMark" src="" alt="SDK Edits logo"></span>
+      <span class="brand-text">SDK<span>.</span>EDITS</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" data-nav="index.html">Home</a>
+      <a href="works.html" data-nav="works.html">My Works</a>
+      <a href="services.html" data-nav="services.html">Services</a>
+      <a href="offers.html" data-nav="offers.html">Offers</a>
+      <a href="contact.html" data-nav="contact.html" class="active">Contact Us</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle theme"><i class="theme-icon fa-solid fa-sun"></i></button>
+      <a class="icon-btn" data-bind="whatsappHref" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      <button class="nav-burger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow reveal">Let's talk</span>
+    <h1 class="section-title reveal">Contact Us</h1>
+    <p class="section-sub reveal">Fastest reply is on WhatsApp. For briefs and files, drop an email — I'll get back within a day.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="scrubber-divider reveal" style="--fill:40%"><span class="tc">00:01</span><span class="track"></span><span class="tc">GET IN TOUCH</span></div>
+
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-card glass">
+          <div class="contact-ic"><i class="fa-brands fa-whatsapp"></i></div>
+          <div>
+            <div class="lbl">WhatsApp</div>
+            <a class="val" data-bind="whatsappHref" href="#" target="_blank" rel="noopener" data-bind-text="whatsappText"><span data-bind="whatsappText">7708509295</span></a>
+          </div>
+        </div>
+        <div class="contact-card glass">
+          <div class="contact-ic"><i class="fa-brands fa-instagram"></i></div>
+          <div>
+            <div class="lbl">Instagram</div>
+            <a class="val" data-bind="instagramHref" href="#" target="_blank" rel="noopener">@sdk_edits_official</a>
+          </div>
+        </div>
+        <div class="contact-card glass">
+          <div class="contact-ic"><i class="fa-regular fa-envelope"></i></div>
+          <div>
+            <div class="lbl">Email</div>
+            <a class="val" data-bind="email" href="#">sdkstudios1211@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-card glass">
+          <div class="contact-ic"><i class="fa-solid fa-clock"></i></div>
+          <div>
+            <div class="lbl">Response time</div>
+            <div class="val">Within 24 hours</div>
+          </div>
+        </div>
+        <p class="map-note"><i class="fa-solid fa-circle-info"></i> Prefer a quick chat? Tap the WhatsApp button in the header — it opens a direct chat, no forms needed.</p>
+      </div>
+
+      <div class="contact-form-card glass reveal">
+        <h3 style="font-family:var(--font-body); font-size:1.2rem; margin-bottom:1.6rem;">Send a project brief</h3>
+        <form id="contactForm">
+          <div class="field-row">
+            <div class="field"><label>Your name</label><input type="text" id="cf-name" required></div>
+            <div class="field"><label>Your email</label><input type="email" id="cf-email" required></div>
+          </div>
+          <div class="field"><label>Project type</label>
+            <select id="cf-type">
+              <option>Video Editing</option>
+              <option>Reel Editing</option>
+              <option>Wedding Video</option>
+              <option>Commercial Editing</option>
+              <option>Photography</option>
+              <option>Colour Grading</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field"><label>Message</label><textarea id="cf-message" required placeholder="Tell me about your footage, timeline and goals..."></textarea></div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;"><i class="fa-regular fa-paper-plane"></i> Send Message</button>
+          <p class="form-msg" id="cfMsg"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand"><span class="brand-mark"><img data-bind="brandMark" src="" alt=""></span><span class="brand-text">SDK<span>.</span>EDITS</span></div>
+        <p>Cinematic video editing and photography by Dinesh Kumar. Reels, commercials, weddings and colour grading.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="works.html">My Works</a>
+          <a href="services.html">Services</a>
+          <a href="offers.html">Offers</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a data-bind="instagramHref" href="#" target="_blank" rel="noopener">Instagram</a>
+          <a data-bind="whatsappHref" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a data-bind="email" href="#">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> SDK Edits — Dinesh Kumar. All rights reserved.</p>
+      <div class="footer-social">
+        <a class="icon-btn" data-bind="instagramHref" href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a class="icon-btn" data-bind="whatsappHref" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <button class="icon-btn" data-owner-trigger aria-label="Owner login"><i class="fa-solid fa-lock"></i></button>
+      </div>
+    </div>
+  </div>
+</footer>
+<button class="to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="common.js"></script>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("contactForm").addEventListener("submit", e=>{
+  e.preventDefault();
+  const name = document.getElementById("cf-name").value.trim();
+  const email = document.getElementById("cf-email").value.trim();
+  const type = document.getElementById("cf-type").value;
+  const message = document.getElementById("cf-message").value.trim();
+  const p = SDK.getProfile();
+
+  const body = `Hi ${p.name}, I'm ${name} (${email}).%0A%0AProject type: ${type}%0A%0A${message}`;
+  const subject = `New enquiry: ${type} — from ${name}`;
+  const mailto = `mailto:${p.email}?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+  window.location.href = mailto;
+
+  const msg = document.getElementById("cfMsg");
+  msg.textContent = "Opening your email app to send this brief to " + p.email + " — or message on WhatsApp for a faster reply.";
+  msg.className = "form-msg ok";
+  e.target.reset();
+});
+</script>
+</body>
+</html>
