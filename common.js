@@ -29,7 +29,7 @@
     bio: "I'm Dinesh Kumar — a video editor and photographer who turns raw, unpolished footage into cinematic stories. Over the years I've cut reels, commercials, wedding films and travel documentaries, chasing one goal every time: make the viewer feel something in the first three seconds.",
     years: "5+",
     photo: "https://i.postimg.cc/1Xs1HB0B/SDK-EDITS-LOGO.png",
-    heroImage: "https://i.postimg.cc/1RYXQ9Nw/logo.jpg",
+    heroImage: "https://i.postimg.cc/kgJFk8YP/Firefly-upscayl-3x-upscayl-standard-4x.png",
     email: "sdkstudios1211@gmail.com",
     whatsapp: "7708509295",
     instagram: "https://www.instagram.com/sdk_edits_official/?__pwa=1",
@@ -37,15 +37,6 @@
   };
 
   const DEFAULT_WORKS = [
-    {id:"w1", type:"video", category:"reels", title:"Coastal Drift — Travel Reel", client:"Personal Project", desc:"A 45-second colour-graded travel reel shot along the Tamil Nadu coastline, cut to a rising cinematic score.", poster:"https://images.unsplash.com/photo-1500534623283-312aade485b7?q=80&w=1000&auto=format&fit=crop", src:""},
-    {id:"w2", type:"video", category:"commercial", title:"Sunrise Roasters — Brand Ad", client:"Sunrise Roasters Co.", desc:"30-second product commercial with motion graphics overlays and warm colour grading.", poster:"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1000&auto=format&fit=crop", src:""},
-    {id:"w3", type:"video", category:"wedding", title:"Aarav & Meera — Wedding Film", client:"Private Client", desc:"Cinematic same-day edit highlighting candid emotion over a classical score.", poster:"https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop", src:""},
-    {id:"p1", type:"photo", category:"photography", title:"Golden Hour Portrait", client:"", desc:"", poster:"https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=900&auto=format&fit=crop", src:""},
-    {id:"p2", type:"photo", category:"photography", title:"Urban Frame Study", client:"", desc:"", poster:"https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=900&auto=format&fit=crop", src:""},
-    {id:"p3", type:"photo", category:"colour-grading", title:"Teal & Orange Grade", client:"", desc:"", poster:"https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=900&auto=format&fit=crop", src:""},
-    {id:"p4", type:"photo", category:"travel", title:"Hillside Fog", client:"", desc:"", poster:"https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=900&auto=format&fit=crop", src:""},
-    {id:"p5", type:"photo", category:"photography", title:"Studio Light Study", client:"", desc:"", poster:"https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=900&auto=format&fit=crop", src:""},
-    {id:"w4", type:"video", category:"reels", title:"Studio BTS — Short", client:"Personal Project", desc:"Behind-the-scenes edit from a commercial shoot day.", poster:"https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1000&auto=format&fit=crop", src:""},
     {id:"vg1", type:"video", category:"videography", title:"Videography Cut 01", client:"Personal Project", desc:"", poster:"", src:"https://youtu.be/-nUYUweWZ70?si=JvjUZ90Fz1iOZEuO"},
     {id:"vg2", type:"video", category:"videography", title:"Videography Cut 02", client:"Personal Project", desc:"", poster:"", src:"https://youtu.be/1mO8UPYIye8?si=Ofl16X_ouXHg7VCV"},
     {id:"vg3", type:"video", category:"videography", title:"Videography Cut 03", client:"Personal Project", desc:"", poster:"", src:"https://youtu.be/svHNDE96wnc?si=W0o9i-QzP_kT9_pO"},
@@ -61,14 +52,24 @@
     {id:"vg13", type:"video", category:"videography", title:"Videography Short 08", client:"Personal Project", desc:"", poster:"", src:"https://youtube.com/shorts/vwQlqZcjvyo?si=kPoOf1IJS6tvAa52"},
     {id:"vg14", type:"video", category:"videography", title:"Videography Short 09", client:"Personal Project", desc:"", poster:"", src:"https://youtube.com/shorts/kQWWmgfF17Q?si=7xfjBrBZeK1HvEEz"},
     {id:"vg15", type:"video", category:"videography", title:"Videography Short 10", client:"Personal Project", desc:"", poster:"", src:"https://youtube.com/shorts/04x50GWp6pg?si=5Vl04tXskNeUJDsx"},
-    {id:"vg16", type:"video", category:"videography", title:"Videography Short 11", client:"Personal Project", desc:"", poster:"", src:"https://youtube.com/shorts/NublDkzty_E?si=6p18FnZvzc2eBZy1"}
+    {id:"vg16", type:"video", category:"videography", title:"Videography Short 11", client:"Personal Project", desc:"", poster:"", src:"https://youtube.com/shorts/NublDkzty_E?si=6p18FnZvzc2eBZy1"},
+    {id:"ph1", type:"photo", category:"photography", title:"Photography Frame 01", client:"", desc:"", poster:"https://i.postimg.cc/SQWzGRQk/3.jpg", src:""},
+    {id:"ph2", type:"photo", category:"photography", title:"Photography Frame 02", client:"", desc:"", poster:"https://i.postimg.cc/7ZQCLT9k/2.jpg", src:""},
+    {id:"ph3", type:"photo", category:"photography", title:"Photography Frame 03", client:"", desc:"", poster:"https://i.postimg.cc/fyKyQ3kz/4.jpg", src:""},
+    {id:"ph4", type:"photo", category:"photography", title:"Photography Frame 04", client:"", desc:"", poster:"https://i.postimg.cc/yxV6jVjv/6-OK.jpg", src:""},
+    {id:"ph5", type:"photo", category:"photography", title:"Photography Frame 05", client:"", desc:"", poster:"https://i.postimg.cc/RhXSbjb9/1.jpg", src:""},
+    {id:"ph6", type:"photo", category:"photography", title:"Photography Frame 06", client:"", desc:"", poster:"https://i.postimg.cc/J0Prd9dX/003.jpg", src:""},
+    {id:"ph7", type:"photo", category:"photography", title:"Photography Frame 07", client:"", desc:"", poster:"https://i.postimg.cc/02y2Jybz/5.jpg", src:""},
+    {id:"ph8", type:"photo", category:"photography", title:"Photography Frame 08", client:"", desc:"", poster:"https://i.postimg.cc/nchcQhC4/ok-va.jpg", src:""},
+    {id:"ph9", type:"photo", category:"photography", title:"Photography Frame 09", client:"", desc:"", poster:"https://i.postimg.cc/kGX98TXG/1751125641356-copy.jpg", src:""},
+    {id:"ph10", type:"photo", category:"photography", title:"Photography Frame 10", client:"", desc:"", poster:"https://i.postimg.cc/mkX4S7t2/shy.jpg", src:""}
   ];
 
   const DEFAULT_OFFERS = {
     plans: [
-      {id:"pl1", name:"Starter Cut", tagline:"For reels & socials", price:"1,499", period:"/ project", featured:false, badge:"", features:["1 short-form video (up to 60s)","Colour correction","Trending audio sync","2 revision rounds","48-hour delivery"]},
-      {id:"pl2", name:"Signature Edit", tagline:"Most-booked package", price:"4,999", period:"/ project", featured:true, badge:"Most Popular", features:["Full video edit up to 5 min","Cinematic colour grading","Motion graphics & titles","Sound design & mixing","4 revision rounds","4-day delivery"]},
-      {id:"pl3", name:"Full Production", tagline:"Weddings & commercials", price:"12,999", period:"/ project", featured:false, badge:"", features:["Multi-cam edit, unlimited length","Advanced colour grading","Custom motion graphics","Licensed music & sound design","Unlimited revisions","Priority delivery"]}
+      {id:"pl1", name:"Starter Cut", tagline:"For reels & socials", price:"599", period:"/ project", featured:false, badge:"", features:["1 short-form video (up to 60s)","Colour correction","Trending audio sync","2 revision rounds","48-hour delivery"]},
+      {id:"pl2", name:"Signature Edit", tagline:"Most-booked package", price:"1,799", period:"/ project", featured:true, badge:"Most Popular", features:["Full video edit up to 5 min","Cinematic colour grading","Motion graphics & titles","Sound design & mixing","4 revision rounds","4-day delivery"]},
+      {id:"pl3", name:"Full Production", tagline:"Weddings & commercials", price:"2,299", period:"/ project", featured:false, badge:"", features:["Multi-cam edit, unlimited length","Advanced colour grading","Custom motion graphics","Licensed music & sound design","Unlimited revisions","Priority delivery"]}
     ],
     deals: [
       {id:"d1", tag:"Limited", title:"Festive Season Bundle", desc:"Book any 2 reels this month and get a free colour-grading pass on both.", expiry:"Valid through this month"},
